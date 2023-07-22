@@ -1,0 +1,84 @@
+            Data Types, Operators and 
+
+Four Primary Data Types in Python: 
+STRING          "1234"
+INTEGER          1234
+LARGE INT        120_000_000
+FLOAT            12.34
+BOOLEAN          TRUE
+
+One can check variable type using type() function
+
+       
+        📍 Understanding Strings v/s Integers       
+           
+            print("123" + "456")
+            Result: 123456
+
+            print(123 + 456)
+            Result: 579
+
+
+        📍 Type conversions:
+                str()
+                int()
+                float()
+
+🟦Example 1:
+
+input_number = input("Type a two digit number: ")
+
+digit_one = int(input_number[0])
+digit_two = int(input_number[1])
+
+output = digit_one + digit_two
+print(output)
+
+
+
+        📍Order of Python priorities: PEMDASLR 
+            Parentheses 
+            Exponents 
+            Multiplication 
+            Division 
+            Addition 
+            Subtraction 
+            Left to Right priority
+
+🟦Example 2: BMI Calculator
+
+height = input("enter your height in m: ")
+weight = input("enter your weight in kg: ")
+
+h = float(height)
+w = float(weight)
+bmi = int(w / (h ** 2))
+print(bmi)
+
+
+
+        📍Round function
+            round(number, ndigits)
+        where number is the number you want to round off, and ndigits is how many decimals you want to round it off to.
+
+        📍Increment Operator
+            score = 0
+            score += 5
+            print(score)
+
+
+
+🟦Example 3: Life in weeks
+
+a = input("What is your current age? ")
+age = int(a)
+
+years_left = 90 - age
+
+days_left = int(years_left * 365)
+weeks_left = int(years_left * 52)
+months_left = int(years_left * 12)
+
+print(f"You have {days_left} days, {weeks_left} weeks, and {months_left} months left.")
+
+#The fstring makes sure you don't have to worry about data types while printing any statements with variable values in it.
