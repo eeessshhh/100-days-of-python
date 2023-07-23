@@ -1,0 +1,17 @@
+            Day 3 Project: Treasure Island
+
+side = input("Welcome to Treasure Island!\n Your mission is to find a treasure.\n Which side do you want to go first? Left or right?")
+if side == "right":
+  print("You chose the wrong side.\n Game over.")
+else:
+  print("Good job.") 
+  task = input("Now do you choose to wait or swim?")
+  if task == "swim":
+    print("Too bad. Sharks ate you. Game over")
+  else:
+    print("Patience is always the key.")
+    color = input("Final level. Which door do you choose now? Yellow/Red/Blue?")
+    if color == "yellow":
+      print("AMAZING!! YOU WON!!")
+    else:
+      print("you ded. lol.")
