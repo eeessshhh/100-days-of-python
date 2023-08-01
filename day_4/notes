@@ -1,0 +1,60 @@
+            Randomization and Lists
+
+        
+        📍Python has a built-in random number generator module.
+import random
+random.randint(a,b)
+
+where a and b define the range between which the random integer is to be generated. 
+
+random.random()
+this one generates a float number between the range (0,1] where 0 is included and 1 is not.
+basically 0.000000 to 0.99999999.
+
+So, if you want a floating number between 0 to 5, then you can simply do this:
+random.random() * 5
+
+
+    🟨Example 1: Heads or Tails
+
+import random
+random_side = random.randint(0,1)
+if random_side == 1:
+	print("Heads")
+else:
+	print("Tails")
+
+
+        📍Python Lists
+
+Lists in python are defined as shown:
+listname = [item1, item2, item3]
+
+We can change and update list values using appropriate indexing methods. 
+The append function can add items to the very end of the list.
+listname.append("item4")
+
+We can add multiple elements to the end using extend function.
+listname.extend(["item5", "item6", "item7"])
+
+
+    🟨Example 2: Random Bill Payer
+
+import random
+#input everyone's names
+names_string = input("Give me everybody's names, separated by a comma. ")
+#Split the inputted names into a list
+names = names_string.split(", ")
+
+#so let's say we have 5 total people. then 5 is the length of that list. So 4 will be
+#last index in that list, i.e 0, 1, 2, 3, 4.
+final_index = len(names) - 1
+#tell the computer to choose between 0 and that last index we got
+choice = random.randint(0, final_index)
+#assign that random number to get a name from our indexed list.
+person_paying = names[choice]
+print(person_paying + " is going to buy the meal today!")
+#This can be substituted by using choice() function that will randomly choose a thing from a given list.
+
+Remember that you can index a particular list using a given variable which has a numerical value.
+For example, in the above case, we used "choice" as a variable with a numeric value to index the "names" list. 
