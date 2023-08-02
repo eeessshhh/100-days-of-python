@@ -1,0 +1,110 @@
+            Python Loops
+
+A loop allows us to execute the same line of code multiple times. 
+
+    📍For Loop Example:
+
+fruits = ["apple","banana","chikoo"]
+for fruit in fruits:
+  print(fruit)
+  print(fruit + " pie")
+print(fruits)
+
+    Output:
+apple
+apple pie
+banana
+banana pie
+chikoo
+chikoo pie
+["apple","banana","chikoo"]
+
+Note how the code indented inside the loop gets repeated over and over again.
+But the code outside it gets executed only once. 
+
+    🟨Practise Problem 1: Average Height
+
+student_heights = input("Input a list of student heights ").split()
+#Here you will input a list of heights separated by a spacebar.
+
+total = 0
+count = 0
+
+for student in student_heights:
+    total += student
+    count += 1
+    average_height = round(total/count)
+    
+print(average_height)
+
+
+    🟨Practise Problem 2: Highest Score
+
+student_scores = input("Input a list of student scores ").split()
+
+for n in range(0, len(student_scores)):
+  student_scores[n] = int(student_scores[n])
+print(student_scores)
+
+highest_score = 0
+for score in student_scores:
+  if score > highest_score:
+    highest_score = score
+print(f"The highest score in the class is: {highest_score}")
+
+
+        📍Range function
+
+The range function creates a range of given numbers with provided start and end number.
+
+🟥Example 1:
+for number in range(1,11):
+    print(number)
+
+Note that the output will print numbers from 1 to 10.
+1 2 3 4 5 6 7 8 9 10
+
+🟥Example 2:
+for number in range(1,11, 2):
+    print(number)
+
+Note that the output will print all odd numbers from 1 to 10.
+1 3 5 7 9
+
+🟥Example 3:
+total = 0
+for number in range(1,101):
+    total += number
+print(total)
+
+Note that the output gives the total sum of all number from 1 to 100.
+5050
+
+🟥Example 4:
+total = 0
+for number in range(1, 101):
+    if number % 2 == 0:
+        total += number
+print(total)
+
+Note that output prints sum of all even numbers between 1 and 100.
+
+This exact same output can be obtained by using the following approach:
+
+total = 0
+for number in range(2, 101, 2):
+    total += number
+print(total)
+
+
+    🟨Practise Problem 3: Fizz Buzz Game
+
+for number in range(1,101):
+    if number % 3 == 0 and number % 5 == 0:
+        print("FizzBuzz")
+    elif number % 3 == 0:
+        print("Fizz")
+    elif number % 5  == 0:
+        print("Buzz")
+    elif number % 3 != 0 and number % 5 != 0:
+        print(number)
