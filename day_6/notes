@@ -1,0 +1,90 @@
+            Functions and While Loops
+
+    🟨Example 1: Reeborgs Hurdle Cross
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+def jump():
+    turn_left()
+    move()
+    turn_right()
+    move()
+    turn_right()
+    move()
+    turn_left()
+
+
+for step in range(6):
+    move()
+    jump()
+
+Refer to the Reeborgs Hurdle Diagram to understand how the obstacle field looks. 
+
+    🟨Example 2: Reeborg Hurdle with Unknown Flag Position
+
+Here we want the robot to stop running the race when it encounters a flag.
+For this, we will keep the jump() function as it is, and use another predefined function called at_goal().
+
+while not at_goal:
+    move()
+    jump()
+
+Dont worry, at_goal() is just a predefined function in the Reeborg software to recognize when Reeborg encounters a flag.
+
+    📍Infinite loops
+
+    while 5 > 3:
+        print("This loop will never end!")
+
+This loop will keep executing since the while condition will never be untrue. 
+
+    🟨Example 3: Reeborg Random Wall Hurdle
+
+So up until now, we knew where the walls in the maze were placed.
+We have to make sure Reeborg completes the maze even if computer generates random walls. 
+
+For this, we keep the jump() and at_goal() functions as it is.
+Reeborg software has another function called wall_in_front().
+
+We use the following piece of code to make sure Reeborg wins every maze.
+        
+        while not at_goal():
+            if wall_in_front():
+                jump()
+            else:
+                move()
+
+    🟨Example 4: Reeborg Random wall + Wall Height Differs
+
+Here, Reeborg will have to face random walls of differing heights.
+The wall_on_right() function will help with climbing up irrespective of the height of the wall.
+The front_is_clear() function will help with climbing down irrespective of the height of the wall.
+
+def turn_right():
+    turn_left()
+    turn_left()
+    turn_left()
+
+def jump():
+    turn_left()
+    while wall_on_right():
+        move()
+    turn_right()
+    move()
+    turn_right()
+    while front_is_clear():
+        move()
+    turn_left()
+    
+while not at_goal():
+    if wall_in_front():
+        jump()
+    else:
+        move()
+    
+    
+   
+
