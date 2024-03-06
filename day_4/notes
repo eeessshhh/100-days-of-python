@@ -1,5 +1,4 @@
             Randomization and Lists
-
         
         📍Python has a built-in random number generator module.
 import random

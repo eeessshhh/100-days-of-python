@@ -118,7 +118,7 @@ print(f"Your final bill is: ${bill}.")
 
 
             📌Logical Operators:
-            and     both A abd B have to be true     
+            and     both A and B have to be true     
             or      only one can be true
             not     reverses the meaning of a condition
 
