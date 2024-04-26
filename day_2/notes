@@ -19,10 +19,12 @@ One can check variable type using type() function
             Result: 579
 
 
-        📍 Type conversions:
+        📍 Type conversions (also called "typecasting"):
                 str()
                 int()
                 float()
+
+Remember that converting from float to int always causes a loss of information.
 
 🟦Example 1:
 
@@ -35,7 +37,6 @@ output = digit_one + digit_two
 print(output)
 
 
-
         📍Order of Python priorities: PEMDASLR 
             Parentheses 
             Exponents 
@@ -44,6 +45,12 @@ print(output)
             Addition 
             Subtraction 
             Left to Right priority
+
+        
+        Keep in mind:
+        Division in python when used as 6/2 always gives a float output (3.0). 
+        If you want integer output, you need to use 6//2.
+
 
 🟦Example 2: BMI Calculator
 
@@ -55,7 +62,8 @@ w = float(weight)
 bmi = int(w / (h ** 2))
 print(bmi)
 
-
+Keep in mind that your height and weight must be input as float numbers. 
+Even if your weight is 58 kg, you should write 58.0. Only then it will work.
 
         📍Round function
             round(number, ndigits)
@@ -65,7 +73,6 @@ print(bmi)
             score = 0
             score += 5
             print(score)
-
 
 
 🟦Example 3: Life in weeks

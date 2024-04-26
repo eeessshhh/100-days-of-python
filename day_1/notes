@@ -1,9 +1,10 @@
-            '''Topic: Working with variables to manage data.'''
+            Working with variables to manage data.
 
 We use Python strings to describe text and alphanumeric data.
 
 The newline operator '\n' acts as an Enter button and prints code on a whole new line.
-print("Hello!\n How are you doing today?")
+This helps with multi-line printing.
+print("Hello!\n How are you doing today?\n Hope you're doing well!")
 
 The + sign is used to concatenate two strings together.
 print("Hello" + "Angela")
@@ -11,6 +12,9 @@ print("Hello" + "Angela")
 If you need to define a string or sentence that has double quotes in it, you can use single quotes to define the string as follows:
 print('e.g. print("Hello" + "world")')
 Output: e.g. print("Hello" + "world")
+
+You can also do this. The escape backslash tells the computer to ignore the double strings and consider it as a string.
+print("She said: \"Heyyy\" and left")
 
 To take input from the user, we use input() function.
 Example:
@@ -24,7 +28,7 @@ Moving on to some practise examples.
 
         name = input("What is your name?")
         print(len(name))
-#Takes input from user and calculates length of the string.
+    #Takes input from user and calculates length of the string.
 
     Practise Example 2: Variable value swapping
 
@@ -35,8 +39,10 @@ Moving on to some practise examples.
         a = b 
         b = c
 
-#We are assigning the value of the first variable to a temporary third variable.
-#Basically transferring stuff between three cups of which two are filled.
+    #We are assigning the value of the first variable to a temporary third variable.
+    #Basically transferring stuff between three cups of which two are filled.
+    #So c takes the value of a. Now that a is empty, it is assigned the value of b.
+    #No that b is empty, it takes the value of c, which was originally the value of a.
 
         print("a: " + a)
         print("b: " + b)
