@@ -8,7 +8,7 @@ print("Hello!\n How are you doing today?")
 The + sign is used to concatenate two strings together.
 print("Hello" + "Angela")
 
-If you need to define a string or sentence that has double quotes in it, you can use single quotes to define the strong as follows:
+If you need to define a string or sentence that has double quotes in it, you can use single quotes to define the string as follows:
 print('e.g. print("Hello" + "world")')
 Output: e.g. print("Hello" + "world")
 
@@ -36,7 +36,7 @@ Moving on to some practise examples.
         b = c
 
 #We are assigning the value of the first variable to a temporary third variable.
-#Basically trabsferring stuff between three cups of which two are filled.
+#Basically transferring stuff between three cups of which two are filled.
 
         print("a: " + a)
         print("b: " + b)
