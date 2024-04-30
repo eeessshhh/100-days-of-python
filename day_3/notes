@@ -11,7 +11,7 @@
 
 #Remember that = is the assignment operator and == is the equal to operator.
 
-
+The best way to understand conditional statements is to create a flowchart to understand the entire code from an overall POV.
 
 🟨Example 1: Odd-Even 
 number = int(input("Which number do you want to check? "))
@@ -20,7 +20,6 @@ if number % 2 == 0:
     print("This is an even number.")
 else:
     print("This is an odd number.")
-
 
         📌We can have if elif else statements, nested if statements and multiple if statements.
 
