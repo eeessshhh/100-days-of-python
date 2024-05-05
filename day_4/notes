@@ -4,7 +4,7 @@
 import random
 random.randint(a,b)
 
-where a and b define the range between which the random integer is to be generated. 
+where a and b define the range between which the random integer is to be generated.
 
 random.random()
 this one generates a float number between the range (0,1] where 0 is included and 1 is not.
@@ -57,3 +57,5 @@ print(person_paying + " is going to buy the meal today!")
 
 Remember that you can index a particular list using a given variable which has a numerical value.
 For example, in the above case, we used "choice" as a variable with a numeric value to index the "names" list. 
+
+(When you revisit, make sure to complete Day 4 Exercise 47 (nested lists) because you have skipped it as it seemed complicated.)
