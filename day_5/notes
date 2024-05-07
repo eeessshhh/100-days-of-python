@@ -37,6 +37,8 @@ for student in student_heights:
     
 print(average_height)
 
+#Notice how you've written round function to obtain well-rounded integer numbers as output, minimizing data loss. 
+
     🟨Practise Problem 2: Highest Score
 
 student_scores = input("Input a list of student scores ").split()
@@ -49,6 +51,8 @@ highest_score = 0
 for score in student_scores:
   if score > highest_score:
     highest_score = score
+  else:
+    continue 
 print(f"The highest score in the class is: {highest_score}")
 
 
@@ -95,6 +99,15 @@ for number in range(2, 101, 2):
     total += number
 print(total)
 
+🟥Example 5:
+target = int(input()) # Enter a number between 0 and 1000
+sum = 0
+for number in range(2, target + 1):
+  if number % 2 == 0:
+    sum += number
+print(sum)
+
+This one does the same thing, but takes a target input number from the user instead of having a fixed starting point like 100.
 
     🟨Practise Problem 3: Fizz Buzz Game
 
@@ -105,5 +118,5 @@ for number in range(1,101):
         print("Fizz")
     elif number % 5  == 0:
         print("Buzz")
-    elif number % 3 != 0 and number % 5 != 0:
+    else:
         print(number)
