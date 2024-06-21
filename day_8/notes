@@ -1,0 +1,49 @@
+            Function Parameters and Caesar Cipher
+
+📍A function without any input:
+
+def greet():
+  print("Hello")
+  print("Hola")
+  print("Namaste")
+
+greet()
+
+📍 A function with input: 
+
+def greet_with_name(name):
+  print(f"Hello {name}")
+  print(f"Hola {name}")
+  print(f"Namaste {name}")
+
+greet_with_name("Eesh")
+
+📍 When we say parameter and argument:
+def my_function(something)
+#do this with 'something'
+#then do this with 'something'
+#and finally do this to 'something'
+
+my_function(123)
+
+The 'something' in the function definition block is the 'parameter'.
+The 123 value that is passed is the 'argument'.
+
+📍 Function with multiple inputs:
+
+def greet_with(name, location):
+  print(f"Hello {name}")
+  print(f"How's the weather like in {location}?")
+
+greet_with("Eesh", "Mumbai")
+
+🟦 KEYWORD ARGUMENTS
+
+In this function, if you pass Mumbai first and Eesha later in the arguments, the output will get switched between the two.
+Instead, one can specify using keyword arguments in any order desired.
+
+def greet_with(name, location):
+  print(f"Hello {name}")
+  print(f"How's the weather like in {location}?")
+
+greet_with(location = "Cork", name = "Eesha")
