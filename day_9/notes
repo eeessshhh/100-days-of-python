@@ -1,0 +1,24 @@
+            Dictionaries and Nesting
+
+📍 Each dictionary has key and value pairs. {Key: Value}
+
+For better readability, programmers write it as follows:
+#They use commas after each entry, including the last one.
+#They indent each entry after the curly bracket in the beginning.
+
+name_of_dictionary = {
+    "key1": "value",
+    "key2": "value",
+    "key3": "value",
+}
+
+To retreive a particular entry, we can call it as follows:
+print(name_of_dictionary["key1"])
+
+To add a new entry to the dictionary:
+name_of_dictionary["key4"] = "value"
+
+One can create an empty dictionary like so...
+empty_dict = {}
+
+... and then add items later on as we saw just now.
