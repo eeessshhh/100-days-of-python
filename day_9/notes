@@ -12,13 +12,62 @@ name_of_dictionary = {
     "key3": "value",
 }
 
-To retreive a particular entry, we can call it as follows:
+📍To retreive a particular entry, we can call it as follows:
 print(name_of_dictionary["key1"])
 
-To add a new entry to the dictionary:
+📍To add a new entry to the dictionary:
 name_of_dictionary["key4"] = "value"
 
-One can create an empty dictionary like so...
+📍One can create an empty dictionary like so...
 empty_dict = {}
 
 ... and then add items later on as we saw just now.
+
+📍In order to loop through a dictionary:
+for key in name_of_dictionary:
+    print(key)
+    print(name_of_dictionary[key])
+
+This will print out both key-value pairs. 
+If you write only print(key), the values for those keys will not be printed out in the terminal.
+
+🟨Example 1: Grading Program using looping through Dictionaries.
+
+student_scores = {
+  "Harry": 81,
+  "Ron": 78,
+  "Hermione": 99, 
+  "Draco": 74,
+  "Neville": 62,
+}
+
+# TODO-1: Create an empty dictionary called student_grades.
+student_grades = {}
+
+# TODO-2: Covert scores into grades.
+for student in student_scores:
+  score = student_scores[student]
+  if score > 90:
+    student_grades[student] = "Outstanding"
+  elif score > 80:
+    student_grades[student] = "Exceeds Expectations"
+  elif score > 70:
+    student_grades[student] = "Acceptable"
+  else:
+    student_grades[student] = "Fail"
+    
+print(student_grades)
+
+📍 N E S T I N G
+
+Nesting a list in a dictionary, which is nested in another dictionary:
+
+travel_log: {
+    "Maharashtra": {"cities_visited": ["Mumbai","Pune","Nagpur"], "total_visits": 20},
+    "Karnataka": {"cities_visited": ["Mangalore","Bengaluru","Mysore"], "total_visits": 26},
+}
+
+travel_log: {
+    {"country_visited": "Maharashtra", "cities_visited": ["Mumbai","Pune","Nagpur"], "total_visits": 20},
+    {"country_visited": "Karnataka", "cities_visited": ["Mangalore","Bengaluru","Mysore"], "total_visits": 26},
+}
