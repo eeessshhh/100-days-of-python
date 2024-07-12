@@ -1,0 +1,46 @@
+            Secret Auction Program
+
+from replit import clear
+#The clear module clears out the screen for the next bidder. 
+
+from art import logo
+print(logo)
+#To print out the gavel sign in the terminal.
+
+bids = {}
+bidding_finished = False
+#We create an empty dictionary called bids.
+#We set initial bidding status to not finished.
+
+def find_highest_bidder(bidding_record):
+  highest_bid = 0
+  for key in bidding_record:
+    bid_amount = bidding_record[key]
+    if bid_amount > highest_bid:
+      highest_bid = bid_amount
+      winner = key
+  print(f"The winner is {winner} with a bid of ${highest_bid}")
+   
+'''
+We define a function find_highest_bidder which initializes highest_bid to 0.
+It then accesses the value of the key from bids dictionary and compares it to the highest bid value of 0.
+Finds highest amount and then assigns a winner.
+'''
+
+while not bidding_finished:
+  name = input("What is your name? ")
+  price = int(input("What is your bid? $"))
+  bids[name] = price
+  should_continue = input("Are there any other bidders? Type 'yes' or 'no'.")
+  if should_continue == "no":
+    bidding_finished = True
+    find_highest_bidder(bids)
+  elif should_continue == "yes":
+    clear()
+
+'''
+A while loop that takes key-value input from user and adds to the bids dictionary.
+Then it decides whether to continue the auction or not.
+If yes, it clears the screen for the next bidder.
+If no, it calls upon the function defined earlier and announces winner.
+'''

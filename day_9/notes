@@ -31,7 +31,7 @@ for key in name_of_dictionary:
 This will print out both key-value pairs. 
 If you write only print(key), the values for those keys will not be printed out in the terminal.
 
-🟨Example 1: Grading Program using looping through Dictionaries.
+            🟨Example 1: Grading Program using looping through Dictionaries.
 
 student_scores = {
   "Harry": 81,
@@ -58,7 +58,7 @@ for student in student_scores:
     
 print(student_grades)
 
-📍 N E S T I N G
+            📍 N E S T I N G
 
 Nesting a list in a dictionary, which is nested in another dictionary:
 
@@ -67,7 +67,43 @@ travel_log: {
     "Karnataka": {"cities_visited": ["Mangalore","Bengaluru","Mysore"], "total_visits": 26},
 }
 
+This can also be written as:
+
 travel_log: {
-    {"country_visited": "Maharashtra", "cities_visited": ["Mumbai","Pune","Nagpur"], "total_visits": 20},
-    {"country_visited": "Karnataka", "cities_visited": ["Mangalore","Bengaluru","Mysore"], "total_visits": 26},
+    {"country_visited": "Maharashtra", 
+    "cities_visited": ["Mumbai","Pune","Nagpur"], 
+    "total_visits": 20},
+
+    {"country_visited": "Karnataka", 
+    "cities_visited": ["Mangalore","Bengaluru","Mysore"], 
+    "total_visits": 26},
 }
+
+            🟨Example 2: Dictionary in list
+
+country = input() # Add country name
+visits = int(input()) # Number of visits
+list_of_cities = eval(input()) # create list from formatted string
+travel_log = [
+  {
+    "country": "France",
+    "visits": 12,
+    "cities": ["Paris", "Lille", "Dijon"]
+  },
+  {
+    "country": "Germany",
+    "visits": 5,
+    "cities": ["Berlin", "Hamburg", "Stuttgart"]
+  },
+]
+# Your code here 👇
+def add_new_country(name, times_visited, cities_visited):
+  new_country = {}
+  new_country["country"] = name
+  new_country["visits"] = times_visited
+  new_country["cities"] = cities_visited
+
+
+add_new_country(country, visits, list_of_cities)
+print(f"I've been to {travel_log[2]['country']} {travel_log[2]['visits']} times.")
+print(f"My favourite city was {travel_log[2]['cities'][0]}.")
