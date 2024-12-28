@@ -56,6 +56,17 @@ for score in student_scores:
 print(f"The highest score in the class is: {highest_score}")
 
 
+#You can use an alternate approach to solve this:
+
+student_scores = list(map(int, input("Input a list of student scores: ").split()))
+print(student_scores)
+
+highest_score = max(student_scores)
+print(f"The highest score in the class is: {highest_score}")
+
+(the map function directly converts the input directly into a list of integers)
+
+
         📍Range function
 
 The range function creates a range of given numbers with provided start and end number.
